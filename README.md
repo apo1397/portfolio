@@ -1,6 +1,6 @@
 # Apoorv Abhishek - Portfolio
 
-This is the online portfolio of Apoorv Abhishek, showcasing projects and experiences. Apoorv is a backend developer turned Product Manager with a passion for building impactful products. While he may harbor a playful disdain for frontend development (a "secret" he happily admits!), his experience spans a variety of domains, including B2B SaaS, e-commerce marketplaces, and real estate platforms. He's also recently ventured into the exciting world of restaurant ownership and embraces the "new vibe code" ethos. This portfolio is inspired by the design and structure found on [Sumanth Samala's website](https://sumanthsamala.com/).
+This is the online portfolio of Apoorv Abhishek, showcasing projects and experiences and hoping a recruiter sees this!
 
 ## About Me
 
@@ -9,8 +9,10 @@ I'm Apoorv Abhishek, a Product Manager with a background in backend development.
 
 **Contact**
 Feel free to connect with me on:
-
 [LinkedIn](https://linkedin.com)  <br/>
 [Email](mailto:apoorvsinha1397@gmail.com)  <br/>
 I'm always open to discussing new opportunities and collaborating on exciting projects.
+
+This portfolio is inspired by the design and structure found on [Sumanth Samala's website](https://sumanthsamala.com/).
+
 
