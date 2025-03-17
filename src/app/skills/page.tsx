@@ -7,21 +7,56 @@ type Skill = {
   name: string;
   proficiency: number;
   category: string;
+  url: string; // Add the URL field
 };
 
 const skills: Skill[] = [
-  { name: "Ruby on Rails", proficiency: 95, category: "Backend" },
-  { name: "React", proficiency: 90, category: "Frontend" },
-  { name: "Node.js", proficiency: 85, category: "Backend" },
-  { name: "AWS", proficiency: 80, category: "DevOps" },
-  { name: "Kubernetes", proficiency: 75, category: "DevOps" },
-  { name: "Docker", proficiency: 85, category: "DevOps" },
-  { name: "TypeScript", proficiency: 85, category: "Frontend" },
-  { name: "PostgreSQL", proficiency: 90, category: "Database" },
-  { name: "MongoDB", proficiency: 75, category: "Database" },
-  { name: "GraphQL", proficiency: 80, category: "API" },
-  { name: "REST API", proficiency: 95, category: "API" },
-  { name: "HTML/CSS", proficiency: 90, category: "Frontend" },
+  // Data Analytics
+  { name: "Metabase", proficiency: 95, category: "Data Analytics", url: "https://metabase.com/" },
+  { name: "Mixpanel", proficiency: 95, category: "Data Analytics", url: "https://mixpanel.com/" },
+  { name: "Google Analytics", proficiency: 95, category: "Data Analytics", url: "https://analytics.google.com/" },
+
+  // AI / LLM
+  { name: "Cursor", proficiency: 95, category: "AI / LLM", url: "https://cursor.so/" },
+  { name: "Void (Open Source AI Code Editor)", proficiency: 95, category: "AI / LLM", url: "https://github.com/voideditor/void" },
+  { name: "Qwen-7B", proficiency: 95, category: "AI / LLM", url: "https://github.com/QwenLM/Qwen-7B" },
+  { name: "Kimi", proficiency: 95, category: "AI / LLM", url: "https://kimi.ai/" },
+  { name: "Uncensored Falcon 7B", proficiency: 95, category: "AI / LLM", url: "https://huggingface.co/uncensored-falcon-7b" },
+  { name: "Stanford STORM", proficiency: 95, category: "AI / LLM", url: "https://storm.genie.stanford.edu/" },
+
+
+  // Product Management
+  { name: "Jira", proficiency: 95, category: "Product Management", url: "https://www.atlassian.com/software/jira" },
+  { name: "Notion", proficiency: 95, category: "Product Management", url: "https://www.notion.so/" },
+  { name: "Asana", proficiency: 95, category: "Product Management", url: "https://asana.com/" },
+  { name: "Figma", proficiency: 95, category: "Product Management", url: "https://www.figma.com/" },
+  { name: "Balsamiq", proficiency: 95, category: "Product Management", url: "https://balsamiq.com/" },
+  { name: "Semrush", proficiency: 95, category: "Product Management", url: "https://www.semrush.com/" },
+  { name: "Google Search Console", proficiency: 95, category: "Product Management", url: "https://search.google.com/search-console" },
+  { name: "Mailchimp", proficiency: 95, category: "Product Management", url: "https://mailchimp.com/" },
+  { name: "6Sense", proficiency: 95, category: "Product Management", url: "https://www.6sense.com/" },
+  { name: "Apollo.io", proficiency: 95, category: "Product Management", url: "https://www.apollo.io/" },
+  { name: "HubSpot", proficiency: 95, category: "Product Management", url: "https://www.hubspot.com/" },
+
+  // Databases
+  { name: "MongoDB", proficiency: 75, category: "Database", url: "https://www.mongodb.com/" },
+  { name: "PostgreSQL", proficiency: 90, category: "Database", url: "https://www.postgresql.org/" },
+  { name: "MySQL", proficiency: 75, category: "Database", url: "https://www.mysql.com/" },
+  { name: "Redis", proficiency: 75, category: "Database", url: "https://redis.io/" },
+
+
+  // Backend
+  { name: "Java", proficiency: 75, category: "Backend", url: "https://www.java.com/" },
+  { name: "Python (Flask)", proficiency: 75, category: "Backend", url: "https://flask.palletsprojects.com/" },
+  { name: "GoLang", proficiency: 75, category: "Backend", url: "https://go.dev/" },
+
+  //Frontend
+  { name: "React", proficiency: 90, category: "Frontend", url: "https://reactjs.org/" },
+  { name: "JavaScript", proficiency: 90, category: "Frontend", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "HTML/CSS", proficiency: 90, category: "Frontend", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "TypeScript", proficiency: 85, category: "Frontend", url: "https://www.typescriptlang.org/" },
+
+
 ];
 
 const categories = [...new Set(skills.map(skill => skill.category))];
@@ -67,7 +102,8 @@ export default function SkillsPage() {
                   .map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
-                      className="bg-zinc-900 p-5 rounded-lg"
+                      className="bg-zinc-900 p-5 rounded-lg cursor-pointer" // Add cursor pointer for UX
+                      onClick={() => window.open(skill.url, '_blank')} // Open link in new tab
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{

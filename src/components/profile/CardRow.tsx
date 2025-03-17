@@ -15,7 +15,7 @@ type CardRowProps = {
   isWatching?: boolean;
 };
 
-export function CardRow({ className, title, cards, isWatching = false }: CardRowProps) {
+export function CardRow({ className, title, cards, isWatching = true }: CardRowProps) {
   return (
     <div className={cn("card-row-container my-12 px-8", className)}>
       <motion.h2
