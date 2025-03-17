@@ -10,7 +10,7 @@ I'm Apoorv Abhishek, a Product Manager with a background in backend development.
 **Contact**
 Feel free to connect with me on:
 
-[LinkedIn](https://linkedin.com) \n
-[Email](mailto:apoorvsinha1397@gmail.com)
+[LinkedIn](https://linkedin.com)  <br/>
+[Email](mailto:apoorvsinha1397@gmail.com)  <br/>
 I'm always open to discussing new opportunities and collaborating on exciting projects.
 
