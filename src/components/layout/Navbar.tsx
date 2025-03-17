@@ -1,8 +1,10 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image'; // Make sure to import the Image component
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import logo from '@/assets/images/apoorv_logo2.png';
 
 type NavbarProps = {
   className?: string;
@@ -22,7 +24,12 @@ export function Navbar({ className }: NavbarProps) {
     <nav className={cn("navbar fixed top-0 left-0 right-0 flex items-center py-4 px-6 z-50 bg-black/80 text-white", className)}>
       <div className="flex items-center"> {/* Use flexbox for horizontal alignment */}
         <Link href="/" className="mr-8">
-          <h1 className="text-2xl font-bold text-red-600">APOORV ABHISHEK</h1>
+          <Image
+            src={logo} // Note: Leading slash is crucial!
+            alt="Apoorv Abhishek Logo"
+            width={100}
+            height={30}
+          />
         </Link>
         <ul className="navbar-links flex space-x-6"> {/* Always use flex */}
           {navbarLinks.map((link) => (

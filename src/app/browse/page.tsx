@@ -173,9 +173,9 @@ export default function BrowsePage() {
                     <div className="relative w-full h-full">
                       <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-black rounded-full"></div>
                       <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-black rounded-full"></div>
-                      <div className="absolute bottom-1/3 left-0 right-0 mx-auto w-12 h-6 border-black border-b-2 rounded-b-full"></div>
-                      <div className="absolute top-2/5 left-1/5 w-1 h-1 bg-white rounded-full"></div>
-                      <div className="absolute top-2/5 right-1/5 w-1 h-1 bg-white rounded-full"></div>
+                      <div className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-12 h-6 border-black border-b-2 rounded-b-full"></div>  {/*Centered the mouth*/}
+                      {/* <div className="absolute top-2/5 left-1/5 w-1 h-1 bg-white rounded-full"></div> */}
+                      {/* <div className="absolute top-2/5 right-1/5 w-1 h-1 bg-white rounded-full"></div> */}
                     </div>
                   </div>
                   <h3 className="profile-name text-lg md:text-xl text-gray-300">{profile.name}</h3>

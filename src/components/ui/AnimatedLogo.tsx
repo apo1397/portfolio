@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import netflixLogo from '@/assets/images/hyp_logo.png'
+import netflixLogo from '@/assets/images/apoorv_logo2.png'
 // import netflixIntro from '@'
 
 export default function AnimatedLogo() {
