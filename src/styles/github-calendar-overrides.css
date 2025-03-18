@@ -1,0 +1,4 @@
+/* src/styles/github-calendar-overrides.css */
+.calendar .github-calendar .day text { /* Example: Target text within day cells */
+  font-family: 'Poppins', sans-serif !important; /* Use !important if absolutely necessary */
+}

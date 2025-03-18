@@ -61,5 +61,7 @@ const navbarLinks = [
   { href: "/work-experience", text: "Professional" },
   { href: "/skills", text: "Skills" },
   { href: "/projects", text: "Projects" },
-  { href: "/contact-me", text: "Hire Me" },
+  { href: "/about-me", text: "About Me" },
+  { href: "/contact-me", text: "Hire Me" }
+  
 ]

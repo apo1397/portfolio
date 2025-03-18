@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import url('https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css'); */
 
 @layer base {
   :root {
@@ -62,11 +63,12 @@
 }
 
 @layer base {
+  body {
+    font-family: 'Poppins', sans-serif; /* Set global font */
+    @apply bg-background text-foreground;
+  }
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
 
@@ -98,6 +100,13 @@
   .play-button:hover,
   .more-info-button:hover {
     @apply scale-105;
+  }
+
+  .github-button {
+    @apply flex items-center bg-gray-600/70 text-white py-3 px-6 rounded hover:bg-gray-500/70 transition-colors;
+  }
+  .github-button:hover {
+    @apply scale-105; /* Add hover effect similar to other buttons */
   }
 
   @keyframes netflix-logo-animation {

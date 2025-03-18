@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
-import { FaPlay, FaLinkedin } from 'react-icons/fa';
+import { FaPlay, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 type ProfileBannerProps = {
   className?: string;
@@ -72,6 +72,7 @@ export function ProfileBanner({ className, backgroundImage }: ProfileBannerProps
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
+          {/* Existing buttons */}
           <button className="play-button flex items-center bg-white text-black py-3 px-6 rounded hover:bg-gray-200 transition-colors">
             <FaPlay className="h-6 w-6 mr-2" />
             <div className="spacer mr-2"></div>
@@ -79,9 +80,16 @@ export function ProfileBanner({ className, backgroundImage }: ProfileBannerProps
           </button>
 
           <button className="more-info-button flex items-center bg-gray-600/70 text-white py-3 px-6 rounded hover:bg-gray-500/70 transition-colors">
-          <FaLinkedin className="h-6 w-6 mr-2" />
+            <FaLinkedin className="h-6 w-6 mr-2" />
             <div className="spacer mr-2"></div>
             <span className="label">LinkedIn</span>
+          </button>
+
+          {/* New GitHub button */}
+          <button className="github-button flex items-center bg-gray-600/70 text-white py-3 px-6 rounded hover:bg-gray-500/70 transition-colors">
+            <FaGithub className="h-6 w-6 mr-2" />
+            <div className="spacer mr-2"></div>
+            <span className="label">GitHub</span>
           </button>
         </motion.div>
       </div>
