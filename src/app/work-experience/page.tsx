@@ -1,5 +1,9 @@
 "use client";
+import WorkExperience from '@/app/work-experience/WorkExperience';
 
+export default function WorkExperiencePage() {
+  return <WorkExperience />;
+}
 import { MainLayout } from '@/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaGraduationCap, FaStar } from 'react-icons/fa';
@@ -88,7 +92,7 @@ const timelineItems: TimelineItemProps[] = [
   }
 ];
 
-export default function WorkExperiencePage() {
+export function WorkExperiencePage2() {
   return (
     <MainLayout>
       <div className="timeline-container pt-24 px-4 md:px-8 pb-16 max-w-6xl mx-auto content">

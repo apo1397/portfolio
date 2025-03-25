@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"], // Add Poppins font family
+        roboto: ["Roboto", "sans-serif"], // Add Roboto font family
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -60,17 +64,20 @@ export default {
       center: true,
       padding: {
         DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        sm: '1.5rem',
+        md: '2rem',
+        lg: '3rem',
+        xl: '4rem',
+        '2xl': '5rem',
       },
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1536px',
+        xs: '390px', // Adjusted for modern small phones
+        sm: '640px', // Standard tablets in portrait
+        md: '768px', // Tablets in landscape
+        lg: '1024px', // Small laptops & larger tablets
+        xl: '1440px', // 13-14" laptops & MacBooks
+        '2xl': '1920px', // Full HD monitors & larger MacBooks
+        '3xl': '2560px', // 2K & 4K monitors
       },
       },
     }

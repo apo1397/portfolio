@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import url('https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css'); */
+
 
 @layer base {
   :root {
@@ -31,6 +34,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --netflix-red: 357 92% 47%;
+    --timeline-gap: 8px; /* Default gap */
   }
 
   .dark {
@@ -64,7 +68,6 @@
 
 @layer base {
   body {
-    font-family: 'Poppins', sans-serif; /* Set global font */
     @apply bg-background text-foreground;
   }
   * {
@@ -126,6 +129,75 @@
 
   .animate-netflix-logo {
     animation: netflix-logo-animation 1s ease-in-out forwards; /* Adjust duration as needed */
+  }
+  .animate-card-appear-left {
+    animation: cardAppearLeft 0.5s ease-in-out forwards;
+  }
+
+  .animate-card-appear-right {
+    animation: cardAppearRight 0.5s ease-in-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .animate-icon-pop {
+    animation: iconPop 0.5s ease-in-out forwards;
+  }
+
+  .delayed-animation {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-20px); /* Optional initial translation */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .delayed-animation.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+  @keyframes cardAppearLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes cardAppearRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes iconPop {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 
@@ -277,4 +349,16 @@
 
 .skill-progress {
   @apply bg-red-600 h-2.5 rounded-full;
+}
+
+.underline-dashed {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: black; /* Default underline color */
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.underline-dashed:hover {
+  text-decoration-color: red; /* Hover underline color */
+  color: red; /* Hover text color */
 }

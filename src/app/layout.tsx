@@ -26,6 +26,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-poppins">
+      {/* <body> */}
         {children}
       </body>
     </html>
