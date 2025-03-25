@@ -272,19 +272,25 @@ export default function WorkExperience() {
     <MainLayout>
       <div className="min-h-screen bg-black text-white py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4"> {/* Increased max-width and added padding */}
-          <h1 className="text-3xl md:text-4xl font-bold mb-16 text-center">Work Experience</h1>
+          {/* Adjusted title position */}
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center relative mt-12">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center bg-black h-8">Work Experience</div>
+          </h1>
 
           <div className="relative" ref={timelineRef}>
             {/* Timeline line with animation */}
-            <div
-              className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-white origin-top"
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-white origin-top"
               style={{
+                top: "2rem",
                 height: `${timelineHeight}px`,
                 transition: "height 1.5s ease-out",
               }}
             ></div>
 
             <div className="relative">
+              {/* New div with top margin */}
+              <div className="h-16" /> {/* Add a 16-unit (4rem) margin. Adjust as needed */}
+              {/* Add top margin to the first item */}
               <div className="grid grid-cols-1 gap-[var(--timeline-gap)]" ref={timelineItemsContainerRef}>
                 {experiences.map((exp, index) => (
                   <ExperienceItem key={index} {...exp} index={index} />
